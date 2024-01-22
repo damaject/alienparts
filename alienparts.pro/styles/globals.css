@@ -1,0 +1,462 @@
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: white;
+  background-image: url('/img/pattern.png');
+  background-repeat: repeat;
+  min-width: 500px;
+  height: 100%;
+  line-height: 1.5;
+}
+
+p {
+  text-align: justify;
+  text-indent: 2em;
+}
+
+a {
+  color: #E60015;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+input, select {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Roboto Slab', sans-serif;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px 8px;
+  margin: 4px 0;
+  color: black;
+  border: 2px solid black;
+}
+
+input:focus, select:focus {
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  background: black;
+  color: white;
+  border: 2px solid #E60015;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  transition: all 0.5s;
+  flex: 0 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 155px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: relative;
+  background-color: black;
+  background-image: url('/img/header_fon.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  border: 2px solid #E60015;
+  display: block;
+}
+.header-logo {
+  position: absolute;
+  top: 36px;
+  left: 15px;
+}
+.header-contact {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  text-align: right;
+  font-size: 15px;
+  line-height: 22px;
+}
+.header-contact a {
+  color: white;
+  text-decoration: none;
+}
+.header-info-block {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  z-index: 100;
+}
+.header-info-dialog-block {
+  position: fixed;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  z-index: 11000;
+}
+.header-info {
+  height: 25px;
+  font-size: 12px;
+  margin: auto auto 5px;
+  padding: 3px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #E60015;
+  width: fit-content;
+  color: white;
+  opacity: 0;
+  animation-name: info-anim;
+  animation-delay: 0ms;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes info-anim {
+  0% {opacity: 0; }
+  10% {opacity: 1; }
+  90% {opacity: 1; }
+  99% {opacity: 0; height: 25px; padding: 3px 8px; margin-bottom: 5px; border: 1px solid #E60015; }
+  100% {opacity: 0; height: 0; padding: 0 0; margin-bottom: 0; border: none; }
+}
+
+.search-form {
+  position: absolute;
+  bottom: 0;
+  /*margin-top: 100px;*/
+  width: 498px;
+  display: flex;
+  /*flex-direction: row;*/
+}
+#search-part {
+  color: #E60015;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 2px solid #E60015;
+  border-top: 2px solid #E60015;
+  background: transparent;
+  width: 350px;
+  padding: 8px;
+  margin: 0;
+  transition: all 0.5s;
+}
+#search-part::placeholder{
+  text-transform: none;
+  color: #AF0000;
+}
+#search-part:-webkit-autofill{-webkit-box-shadow: inset 0 0 0 50px black;}
+#search-submit {
+  width: 148px;
+  color: #E60015;
+  border: 2px solid #E60015;
+  border-left: 0;
+  border-bottom: 0;
+  margin: 0;
+  background-color: transparent;
+}
+#search-submit:hover {
+  color: black;
+  background-color: #E60015;
+}
+
+.iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.content {
+  flex: 1 0 auto;
+  border-left: 2px solid #E60015;
+  border-right: 2px solid #E60015;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.content-center-buttons {
+  width: 400px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 20px;
+  color: black;
+  border-bottom: 2px solid black;
+  transition: all 0.5s;
+  width: 100%;
+}
+.title-small {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  /*text-transform: uppercase;*/
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 30px 4px 4px 4px;
+  color: black;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.main-button a, button {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: black;
+  border: 2px solid black;
+  background: rgba(255, 255, 255, 0.6);
+
+  width: 100%;
+  display: inline-block;
+  margin: 10px auto auto;
+  padding: 8px 20px;
+  transition: all 0.5s;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.main-button a:hover, button:hover {
+  color: white;
+  background-color: black;
+}
+
+.main-select {
+  text-transform: none;
+  width: 100%;
+}
+.main-select-unselect {
+  color: #757575;
+}
+.main-select-unselect option {
+  color: black;
+}
+/*.check-button-uncheck:hover {*/
+/*  color: #757575;*/
+/*}*/
+
+.table-button a {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+
+  color: black;
+  border: 0;
+  background: transparent;
+
+  height: 40px;
+  width: 50px;
+  display: inline-block;
+  margin: 0;
+  padding: 5px;
+  transition: all 0.5s;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.table-button a:hover {
+  color: white;
+  background-color: black;
+}
+
+.table-mini-button a {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+
+  color: black;
+  border: 0;
+  background: transparent;
+
+  height: 33px;
+  width: 40px;
+  display: inline-block;
+  margin: 0;
+  padding: 4px;
+  transition: all 0.5s;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.table-mini-button a:hover {
+  color: white;
+  background-color: black;
+}
+
+.header-button a {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #E60015;
+  border: 2px solid #E60015;
+  background: transparent;
+
+  right: 10px;
+  top: 10px;
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  padding: 3px 20px;
+  position: absolute;
+  transition: all 0.5s;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.header-button a:hover {
+  color: black;
+  background-color: #E60015;
+}
+
+.red-button {
+  color: #AF0000;
+  border: 2px solid #AF0000;
+}
+.red-button:hover {
+  color: white;
+  background-color: #AF0000;
+}
+
+.green-button {
+  color: #046000;
+  border: 2px solid #046000;
+}
+.green-button:hover {
+  color: white;
+  background-color: #046000;
+}
+
+.check-button {
+  color: black;
+  border: 2px solid black;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px;
+
+  text-align: left;
+  text-transform: none;
+}
+.check-button:hover {
+  color: black;
+  border: 2px solid black;
+  background: rgba(255, 255, 255, 0.6);
+}
+.check-button:focus{
+  outline: none;
+}
+.check-button-uncheck {
+  color: #757575;
+}
+.check-button-uncheck:hover {
+  color: #757575;
+}
+
+
+.dialog {
+  /*display: none;*/
+  position: fixed;
+  z-index: 9000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  /*padding-top: 60px;*/
+}
+
+.dialog-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid black;
+  width: fit-content;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+

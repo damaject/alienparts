@@ -1,0 +1,160 @@
+.auth-form {
+  margin: auto;
+  width: 400px;
+}
+.auth-form input {
+  text-transform: none;
+  width: 100%;
+}
+.auth-form input::placeholder {
+  text-transform: none;
+}
+.auth-form label {
+  padding-left: 4px;
+  display: inline-block;
+}
+
+
+
+.code-form {
+  margin: auto;
+  width: 400px;
+}
+.code-form .code-input {
+  font-size: 32px;
+  letter-spacing: 8px;
+  text-align: center;
+}
+.code-form input {
+  text-transform: none;
+  width: 100%;
+}
+.code-form input::placeholder {
+  text-transform: none;
+}
+.code-form label {
+  padding-left: 4px;
+  display: inline-block;
+}
+
+
+
+.add-form {
+  margin: auto;
+  width: 400px;
+}
+.add-form input {
+  text-transform: none;
+  margin: 0;
+  width: 100%;
+}
+.add-form input::placeholder {
+  text-transform: none;
+}
+.add-form label {
+  padding-left: 4px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.add-form p {
+  margin-top: -15px;
+  font-size: 12px;
+  text-align: justify;
+  text-indent: 0.5em;
+}
+
+.add-form .check-button {
+  margin: 0;
+  width: 190px;
+}
+
+
+
+.edit-form {
+  margin: auto;
+  width: 820px;
+}
+.edit-form input {
+  text-transform: none;
+  margin: 0;
+  width: 100%;
+  transition: all 0.5s;
+}
+.edit-form input::placeholder {
+  text-transform: none;
+}
+.edit-form input:disabled:hover {
+  color: white;
+  background-color: black;
+}
+.edit-form label {
+  padding-left: 4px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  display: block;
+}
+.edit-form p {
+  margin-top: -15px;
+  font-size: 12px;
+  text-align: justify;
+  text-indent: 0.5em;
+}
+.edit-form .check-button {
+  margin: 0;
+  width: 190px;
+}
+.edit-form .edit-form-column {
+  width: 400px;
+  margin: 0 auto;
+  display: inline-block;
+}
+.edit-form .edit-form-semi-column {
+  width: 190px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+
+
+.edit-list-form {
+  margin: auto;
+  width: 400px;
+}
+.edit-list-form input {
+  text-transform: none;
+  margin: 0;
+  width: 100%;
+  transition: all 0.5s;
+}
+.edit-list-form input::placeholder {
+  text-transform: none;
+}
+.edit-list-form input:disabled:hover {
+  color: white;
+  background-color: black;
+}
+.edit-list-form label {
+  padding-left: 4px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  display: block;
+}
+.edit-list-form p {
+  margin-top: -15px;
+  font-size: 12px;
+  text-align: justify;
+  text-indent: 0.5em;
+}
+.edit-list-form .check-button {
+  margin: 0;
+  width: 190px;
+}
+.edit-list-form .edit-form-column {
+  width: 190px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+
